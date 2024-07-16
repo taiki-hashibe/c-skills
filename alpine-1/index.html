@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Tailwindcssを使ってみる</title>
+</head>
+
+<body>
+    <header class="px-16 py-4 shadow-md">
+        <nav class="flex justify-between">
+            <h1>
+                <a href="#">My Page</a>
+            </h1>
+            <div x-data="{ open: false }">
+                <button @click="open = true">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <div x-show="open" class="w-screen h-screen fixed z-10 top-0 left-0 bg-white px-16 py-4">
+                    <div class="flex justify-end">
+                        <button @click="open = false">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col items-center justify-center h-full">
+                        <li>
+                            <a href="#" class="py-4">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-4">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-4">Service</a>
+                        </li>
+                        <li>
+                            <a href="#" class="py-4">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="min-h-screen px-16">
+        <div class="grid grid-cols-3 gap-4 mt-16">
+            <div class="w-full h-60 bg-blue-200 rounded-md shadow-md duration-100 hover:bg-blue-400">
+
+            </div>
+            <div class="w-full h-60 bg-red-200 rounded-md shadow-md animate-pulse">
+
+            </div>
+            <div class="w-full h-60 bg-yellow-200 rounded-md shadow-md">
+
+            </div>
+            <div class="w-full h-60 bg-green-200 rounded-md shadow-md">
+
+            </div>
+            <div class="w-full h-60 bg-sky-200 rounded-md shadow-md">
+
+            </div>
+            <div class="w-full h-60 bg-orange-200 rounded-md shadow-md">
+
+            </div>
+        </div>
+    </main>
+    <footer class="px-16 py-4 bg-slate-400">
+        <p class="text-center text-slate-50 text-sm">&copy;2024 C-SKILLS</p>
+    </footer>
+</body>
+
+</html>
