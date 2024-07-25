@@ -23,7 +23,14 @@
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </button>
-                <div x-show="open" class="w-screen h-screen fixed z-10 top-0 left-0 bg-white px-16 py-4">
+                <div x-show="open" class="w-screen h-screen fixed z-10 top-0 left-0 bg-white px-16 py-4"
+                        x-transition:enter="transition liner duration-200"
+                        x-transition:enter-start="opacity-0 -translate-y-full"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition liner duration-200"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-full"
+                >
                     <div class="flex justify-end">
                         <button @click="open = false">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
